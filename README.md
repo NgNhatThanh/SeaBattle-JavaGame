@@ -18,6 +18,11 @@ The project was done by [Nguyễn Nhật Thành](https://github.com/NgNhatThanh)
 - Clone the repo
 - Run the 'GameLauncher.bat' batch file to play the game
 
+## UML
+
+![Alt text](images/class_diagram.png)
+![Alt text](images/activity_diagram.png)
+
 ## Demo
 
 ![Alt text](images/image.png)
