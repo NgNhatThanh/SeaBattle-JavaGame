@@ -5,6 +5,8 @@ Sea Battle is a game for two players. The game is played on four grids, two for 
 The project was done by [Nguyễn Nhật Thành](https://github.com/NgNhatThanh), in the course of Object Oriented Programming at [ProPTIT](https://proptit.com/).
 
 
+## Video Demo: [Link](https://youtu.be/Hit3bYx5FKI) 
+
 ## Tech Stack
 
 - [Java](https://www.java.com/en/) 
