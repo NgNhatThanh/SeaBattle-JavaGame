@@ -14,6 +14,7 @@ The project was done by [Nguyễn Nhật Thành](https://github.com/NgNhatThanh)
 
 ## Installation
 
+- Install JDK
 - Clone the repo
 - Run the 'GameLauncher.bat' batch file to play the game
 
