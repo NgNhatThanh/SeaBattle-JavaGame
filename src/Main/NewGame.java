@@ -56,7 +56,7 @@ public class NewGame  {
         if(!winner.isBot()) Leaderboard.addPlayer(winner);
         System.out.println("Press any key to get back to menu.");
         GameLoad.clear();
-        String back = cin.nextLine();
+        cin.nextLine();
         Screen.clear();
         startScreen();
     }
@@ -80,7 +80,7 @@ public class NewGame  {
                     if(n.equals("2")){
                         ps[turn].displayMyBoard();
                         System.out.print("Press any key to get back.");
-                        String back = cin.nextLine();
+                        cin.nextLine();
                         Screen.clear();
                     }
                     else if(ok == 0 && !Checker.checkInRange(1, 3, n)) System.out.println(Print.setColor("Invalid option, please choose again.", "Red"));
@@ -140,7 +140,7 @@ public class NewGame  {
             System.out.println(Print.setColor(list++ + ", Leaderboard.", "Cyan"));
             if(Sound.canPlay) System.out.println(Print.setColor(list++ + ", Turn off sound.", "Purple"));
             else System.out.println(Print.setColor(list++ +  ", Turn on sound.", "Purple"));
-            System.out.println(Print.setColor(list++ +  ", Exit.", "Red"));
+            System.out.println(Print.setColor(list +  ", Exit.", "Red"));
             select = cin.nextLine();
             Sound.onButtonMenuSound();
             ok = 0;

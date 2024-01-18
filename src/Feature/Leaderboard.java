@@ -35,14 +35,10 @@ public class Leaderboard {
         writer.close();
         List<Player> list = new ArrayList<>();
         getDatafromFile(list);
-        Collections.sort(list, new sortCompare());
+        list.sort(new sortCompare());
         BufferedWriter writer1 = new BufferedWriter(new FileWriter(fileLocation));
         for(int i=0; i<Integer.min(list.size(), 5); ++i) writer1.write(list.get(i).getName() + " " + list.get(i).getTurnCount() + " " + list.get(i).getRemainShip() + "\n");
         writer1.close();
-    }
-    static public void clear() throws IOException {
-        BufferedWriter clear = new BufferedWriter(new FileWriter(fileLocation));
-        clear.close();
     }
     static public void display() throws IOException, InterruptedException, UnsupportedAudioFileException, LineUnavailableException {
         Screen.clear();
@@ -68,7 +64,7 @@ public class Leaderboard {
             Table.draw(title, content, columnSize);
         }
         System.out.println("Press any key to get back.");
-        String end = cin.nextLine();
+        cin.nextLine();
         Sound.onButtonMenuSound();
     }
     static public boolean checkEmpty() throws IOException {

@@ -24,10 +24,10 @@ public class Board {
         Size = Integer.parseInt(input);
         System.out.println("Board size is " + Size + "x" + Size + " now.");
         System.out.println("Press any key to get back.");
-        String back = cin.nextLine();
+        cin.nextLine();
     }
-    private char[][] grid = new char[20][20];
-    private String[][] colorPrint = new String[20][20];
+    private final char[][] grid = new char[20][20];
+    private final String[][] colorPrint = new String[20][20];
     public ArrayList<Ship> shipList = new ArrayList<>();
     public void addShip(String[][] ls, int remain){
         shipList.clear();
@@ -108,7 +108,7 @@ public class Board {
         display();
         for(var x : shipList){
             int x1 = -1, y1 = 0, x2 = 0, y2 = 0, ok = 1;
-            String toaDoDau = "", toaDoCuoi = "";
+            String toaDoDau, toaDoCuoi;
             while(!Checker.check2coordinate(x1, y1, x2, y2, getGrid(), x.getShipLength())){
                 if(ok == 0) System.out.println(Print.setColor("Invalid coordinates, please type again.", "Red"));
                 System.out.println("Type start and end coordinates of " + x.getShipName() + "(length: " + x.getShipLength() + ")" + ": ");

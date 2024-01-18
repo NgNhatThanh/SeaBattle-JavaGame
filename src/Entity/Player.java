@@ -68,7 +68,7 @@ public class Player{
         ++turnCount;
         GameLoad gl = new GameLoad();
         int x = -1, y = 0, cnt = 0;
-        String toaDoBan = "";
+        String toaDoBan;
         bullet = 1;
         while(bullet > 0 && Point < 5){
             gl.save(new Player[]{this, Enemy});
@@ -113,5 +113,4 @@ public class Player{
         Enemy.playNow = Enemy.stt;
         Screen.clear();
     }
-    public boolean checkDrown(){ return myBoard.checkDrown(myBoard.getGrid()); }
 }
